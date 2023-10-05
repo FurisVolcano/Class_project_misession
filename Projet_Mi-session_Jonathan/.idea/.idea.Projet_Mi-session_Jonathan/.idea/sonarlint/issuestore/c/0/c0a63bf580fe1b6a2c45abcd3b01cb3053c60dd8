@@ -1,0 +1,6 @@
+
+ƒcsharpsquid:S101"bRename class 'Player_Movement' to match pascal case naming rules, consider using 'PlayerMovement'.(ÓèÕ¯ùÿÿÿÿ
+Pcsharpsquid:S3903".Move 'Player_Movement' into a named namespace.(ÓèÕ¯ùÿÿÿÿ
+ycsharpsquid:S1450	"PRemove the field 'x' and declare it as a local variable in the relevant methods.(İœ°ıÿÿÿÿ8Ğ¯Ù™¯1
+ycsharpsquid:S1450
+"PRemove the field 'y' and declare it as a local variable in the relevant methods.(›‚®ûÿÿÿÿ8çÓÙ™¯1
