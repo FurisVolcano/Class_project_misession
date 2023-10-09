@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 12
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668592256c2116f408e232bb6aa44f28
+      internalID: -714446322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 11
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba7dc279d9c35c419394e1dfebb505e
+      internalID: -691714120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 11
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f259474ddefc50c4bbffde3345e373af
+      internalID: 2067517053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 12
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c384af46818195343bdc012b657b9e40
+      internalID: 805231517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_4
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 12
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47b608c0553e2440a3ffdbdb5692328
+      internalID: -1776050473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 12
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88be9c353aab3d94e80fb30c1721e2ed
+      internalID: 1981808700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_6
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 12
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e3e3e1e4f6c4f41935afac9b351629
+      internalID: -1038573732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_7
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 12
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d987120e02831ad4aadc08e3f3e49363
+      internalID: 1306903900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_8
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 12
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf77aa8c3772a74f98bfea8f01e5fb9
+      internalID: 85841757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolf_DoubleAttack_9
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 12
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8ac9c6a2376164482f68ba4ace9f90
+      internalID: 1997940590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +342,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wolf_DoubleAttack_0: -714446322
+      wolf_DoubleAttack_1: -691714120
+      wolf_DoubleAttack_2: 2067517053
+      wolf_DoubleAttack_3: 805231517
+      wolf_DoubleAttack_4: -1776050473
+      wolf_DoubleAttack_5: 1981808700
+      wolf_DoubleAttack_6: -1038573732
+      wolf_DoubleAttack_7: 1306903900
+      wolf_DoubleAttack_8: 85841757
+      wolf_DoubleAttack_9: 1997940590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
