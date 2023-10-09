@@ -8,7 +8,7 @@ public class Player_Movement : MonoBehaviour
     private float x;
     private float y;
     Rigidbody2D rb2d;
-     [SerializeField]
+    [SerializeField]
     private float speed;
 
 

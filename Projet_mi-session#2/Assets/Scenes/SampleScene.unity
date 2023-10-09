@@ -272,9 +272,8 @@ GameObject:
   - component: {fileID: 538631334}
   - component: {fileID: 538631333}
   - component: {fileID: 538631332}
-  - component: {fileID: 538631331}
-  - component: {fileID: 538631336}
   - component: {fileID: 538631337}
+  - component: {fileID: 538631338}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -282,19 +281,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &538631331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538631330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a7869034191984ab82ae5f4ff2f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
 --- !u!61 &538631332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,7 +317,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 0.64}
+    oldSize: {x: 0.18, y: 0.37}
     newSize: {x: 0.8, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -434,19 +420,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &538631336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538631330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75a1e6ce7a89e254eb69f671a7273c60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
 --- !u!95 &538631337
 Animator:
   serializedVersion: 5
@@ -457,7 +430,7 @@ Animator:
   m_GameObject: {fileID: 538631330}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -3210062963823328679, guid: cc1f5ce54ed5faf45b102751adc3c399, type: 3}
+  m_Controller: {fileID: 9100000, guid: b44e61c72553ab645b0952eb59e890af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -468,6 +441,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &538631338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538631330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a7869034191984ab82ae5f4ff2f527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
