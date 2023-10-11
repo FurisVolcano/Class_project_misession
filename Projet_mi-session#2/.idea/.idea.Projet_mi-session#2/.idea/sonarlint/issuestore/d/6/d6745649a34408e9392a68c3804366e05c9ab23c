@@ -1,7 +1,6 @@
 
-Šcsharpsquid:S101"bRename class 'Player_Movement' to match pascal case naming rules, consider using 'PlayerMovement'.(ÓèÕ¯ùÿÿÿÿ8ŒÊ²±1
-Wcsharpsquid:S3903".Move 'Player_Movement' into a named namespace.(ÓèÕ¯ùÿÿÿÿ8ŒÊ²±1
-Acsharpsquid:S2933"Make 'facingRght' 'readonly'.(—üı²8¤˜½Î±1
-[csharpsquid:S3459
-"2Remove unassigned field 'speed', or set its value.(ƒØéŠøÿÿÿÿ8úºÎ±1
-€csharpsquid:S1450"\Remove the field 'moveDirection' and declare it as a local variable in the relevant methods.(¦“¾©8İœØÍ±1
+Šcsharpsquid:S101"bRename class 'Player_Movement' to match pascal case naming rules, consider using 'PlayerMovement'.(ÓèÕ¯ùÿÿÿÿ8ŒÊ²±1
+Wcsharpsquid:S3903".Move 'Player_Movement' into a named namespace.(ÓèÕ¯ùÿÿÿÿ8ŒÊ²±1
+hcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(şÜ’™8ÑÒèÎ±1
+hcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(ıÏÖ‡8Üï´Ï±1
