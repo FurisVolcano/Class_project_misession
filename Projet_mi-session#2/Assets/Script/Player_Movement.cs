@@ -20,9 +20,11 @@ public class Player_Movement : MonoBehaviour
     private bool isJumping = false;
     private bool isGrounded;
     private int jumpCount;
+    Animator animator;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         jumpCount = maxJumpCount;
     }
 
@@ -36,6 +38,11 @@ public class Player_Movement : MonoBehaviour
     {
         InputProcess();
         Animate();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            
+        }
     }
 
     private void FixedUpdate()
@@ -70,6 +77,32 @@ public class Player_Movement : MonoBehaviour
         {
             FlipCharacter();
         }
+        
+        if (Input.GetKey(KeyCode.None))
+        {
+            animator.Play("Wolf_Idle");
+        }
+        else if(Input.GetKey("a") || Input.GetKey("d"))
+        {
+            animator.Play(("Walk_Animation"));
+        }
+        else if (Input.GetKey("space"))
+        {
+            animator.Play("Jump_Animation");
+        }
+        else if (Input.GetKey("Fire1"))
+        {
+            animator.Play("Attack#1_Animation");
+        }
+        else if (Input.GetKey("Fire2"))
+        {
+            animator.Play("Attack#2_Animation");
+        }
+        else if (Input.GetKey("Fire3"))
+        {
+            animator.Play("Wolf_Dash");
+        }
+        
     }
 
     private void InputProcess()
