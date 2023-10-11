@@ -19,6 +19,7 @@ public class Player_Movement : MonoBehaviour
     private float moveDirection;
     private bool isJumping = false;
     private bool isGrounded;
+    private bool isAttacking = false;
     private int jumpCount;
     Animator animator;
 
@@ -39,9 +40,9 @@ public class Player_Movement : MonoBehaviour
         InputProcess();
         Animate();
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3") && !isAttacking)
         {
-            
+            isAttacking = true;
         }
     }
 
@@ -90,15 +91,15 @@ public class Player_Movement : MonoBehaviour
         {
             animator.Play("Jump_Animation");
         }
-        else if (Input.GetKey("Fire1"))
+        else if (Input.GetButtonDown("Fire1"))
         {
             animator.Play("Attack#1_Animation");
         }
-        else if (Input.GetKey("Fire2"))
+        else if (Input.GetButtonDown("Fire2"))
         {
             animator.Play("Attack#2_Animation");
         }
-        else if (Input.GetKey("Fire3"))
+        else if (Input.GetButtonDown("Fire3"))
         {
             animator.Play("Wolf_Dash");
         }
