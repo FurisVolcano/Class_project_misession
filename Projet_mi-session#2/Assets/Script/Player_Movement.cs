@@ -22,28 +22,48 @@ public class Player_Movement : MonoBehaviour
     private bool isAttacking = false;
     private int jumpCount;
     Animator animator;
+    [SerializeField]
+    private GameObject attackHitBox;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         jumpCount = maxJumpCount;
+        attackHitBox.SetActive(false);
     }
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-    
-    
+
+
     private void Update()
     {
         InputProcess();
         Animate();
 
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3") && !isAttacking)
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") ||
+            Input.GetButtonDown("Fire3") && !isAttacking)
         {
             isAttacking = true;
+
+            StartCoroutine(DoMelee());
         }
+    }
+
+    IEnumerator DoMelee()
+    {
+        attackHitBox.SetActive(true);
+        yield return new WaitForSeconds(.4f);
+        attackHitBox.SetActive(false);
+        isAttacking = false;
+    }
+    
+
+    private void ResetMeleeCycle()
+    {
+      isAttacking = false;
     }
 
     private void FixedUpdate()
