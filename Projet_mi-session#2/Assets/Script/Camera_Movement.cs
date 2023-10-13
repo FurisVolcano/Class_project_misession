@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
+    [SerializeField] 
+    GameObject Player;
 
-    void LateUpdate()
+    void Update()
     {
         transform.position = Player.transform.position + new Vector3(0,0,-10);
     }

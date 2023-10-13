@@ -15,6 +15,8 @@ public class Player_Movement : MonoBehaviour
     public int maxJumpCount;
     
     Rigidbody2D rb2d;
+    SpriteRenderer _spriteRenderer;
+    
     private bool facingRight = true;
     private float moveDirection;
     private bool isJumping = false;
@@ -22,14 +24,15 @@ public class Player_Movement : MonoBehaviour
     private bool isAttacking = false;
     private int jumpCount;
     Animator animator;
+    
     [SerializeField]
-    private GameObject attackHitBox;
+    private GameObject meleeHitBox;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         jumpCount = maxJumpCount;
-        attackHitBox.SetActive(false);
+        meleeHitBox.SetActive(false);
     }
 
     private void Awake()
@@ -43,8 +46,7 @@ public class Player_Movement : MonoBehaviour
         InputProcess();
         Animate();
 
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") ||
-            Input.GetButtonDown("Fire3") && !isAttacking)
+        if (Input.GetButtonDown("Fire1") && !isAttacking)
         {
             isAttacking = true;
 
@@ -54,9 +56,9 @@ public class Player_Movement : MonoBehaviour
 
     IEnumerator DoMelee()
     {
-        attackHitBox.SetActive(true);
+        meleeHitBox.SetActive(true);
         yield return new WaitForSeconds(.4f);
-        attackHitBox.SetActive(false);
+        meleeHitBox.SetActive(false);
         isAttacking = false;
     }
     
