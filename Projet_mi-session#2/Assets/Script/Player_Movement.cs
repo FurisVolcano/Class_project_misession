@@ -96,7 +96,7 @@ public class Player_Movement : MonoBehaviour
         {
             FlipCharacter();
         }
-        else if (moveDirection < 0 && facingRight)
+        if (moveDirection < 0 && facingRight)
         {
             FlipCharacter();
         }
@@ -109,19 +109,19 @@ public class Player_Movement : MonoBehaviour
         {
             animator.Play(("Walk_Animation"));
         }
-        else if (Input.GetKey("space"))
+        if (Input.GetKey("space"))
         {
             animator.Play("Jump_Animation");
         }
-        else if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             animator.Play("Attack#1_Animation");
         }
-        else if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             animator.Play("Attack#2_Animation");
         }
-        else if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Fire3"))
         {
             animator.Play("Wolf_Dash");
         }
