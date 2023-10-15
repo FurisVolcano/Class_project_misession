@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 538631337}
   - component: {fileID: 538631338}
   - component: {fileID: 538631339}
+  - component: {fileID: 538631340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -788,6 +789,23 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 538631330}
+--- !u!114 &538631340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538631330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77241f5e561b75844a2b63d8009eba1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleePoint: {fileID: 467629499}
+  meleeRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1029,7 @@ GameObject:
   - component: {fileID: 686951094}
   - component: {fileID: 686951093}
   - component: {fileID: 686951092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flying_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,7 +1455,7 @@ GameObject:
   - component: {fileID: 1298062931}
   - component: {fileID: 1298062930}
   - component: {fileID: 1298062929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
