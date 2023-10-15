@@ -25,14 +25,13 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount;
     Animator animator;
     
-    [SerializeField]
-    private GameObject meleeHitBox;
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         jumpCount = maxJumpCount;
-        meleeHitBox.SetActive(false);
+
     }
 
     private void Awake()
@@ -49,17 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !isAttacking)
         {
             isAttacking = true;
-
-            StartCoroutine(DoMelee());
         }
-    }
-
-    IEnumerator DoMelee()
-    {
-        meleeHitBox.SetActive(true);
-        yield return new WaitForSeconds(.4f);
-        meleeHitBox.SetActive(false);
-        isAttacking = false;
     }
     
 

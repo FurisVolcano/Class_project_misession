@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,16 +9,19 @@ public class PlayerAttack : MonoBehaviour
     public float meleeRange = 0.5f;
     public LayerMask enemyLayers;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Attack();
+        }
+        if (Input.GetButtonDown("Fire3"))
         {
             Attack();
         }
@@ -31,5 +35,13 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log("We hit" + enemy.name);
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if(meleePoint == null)
+            return;
+        
+        Gizmos.DrawWireSphere(meleePoint.position, meleeRange);
     }
 }
