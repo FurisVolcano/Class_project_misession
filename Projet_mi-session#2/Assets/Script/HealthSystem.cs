@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Healthsystem : MonoBehaviour
@@ -19,8 +20,9 @@ public class Healthsystem : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            RestartCurrentScene();
         }
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             TakeDamage(20);
@@ -30,6 +32,12 @@ public class Healthsystem : MonoBehaviour
         {
             Heal(5);
         }
+    }
+    
+    public void RestartCurrentScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void TakeDamage(float damage)

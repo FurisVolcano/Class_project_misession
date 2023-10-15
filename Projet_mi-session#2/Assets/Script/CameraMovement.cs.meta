@@ -3,8 +3,9 @@ guid: 75a1e6ce7a89e254eb69f671a7273c60
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
+  defaultReferences:
+  - PlayerPath: {fileID: 8658416935115418080, guid: 9d8dba8f5972c4d4a9a50bf75a7a61f3, type: 3}
+  executionOrder: 50
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
