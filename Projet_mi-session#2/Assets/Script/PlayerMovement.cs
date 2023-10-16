@@ -102,19 +102,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.Play("Jump_Animation");
         }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            animator.Play("Attack#1_Animation");
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            animator.Play("Attack#2_Animation");
-        }
-        if (Input.GetButtonDown("Fire3"))
-        {
-            animator.Play("Wolf_Dash");
-        }
-        
     }
 
     private void InputProcess()

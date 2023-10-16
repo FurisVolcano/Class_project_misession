@@ -754,11 +754,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77241f5e561b75844a2b63d8009eba1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 538631337}
   meleePoint: {fileID: 467629499}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
   meleeRange: 0.16
+  meleeRate: 2
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e716f0f33a4e46447a73b81a237f3af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1298062929}
   healthAmount: 200
 --- !u!1 &1516930254
 GameObject:

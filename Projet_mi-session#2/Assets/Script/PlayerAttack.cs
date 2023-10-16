@@ -5,30 +5,43 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public Animator animator;
     public Transform meleePoint; 
     public LayerMask enemyLayers;
     
     public float meleeRange = 0.5f;
     private int meleeDamage = 20;
+    private float nextMeleeTime = 0f;
+    public float meleeRate = 2f;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.time >= nextMeleeTime)
         {
-            meleeDamage = 20;
-            Attack();
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            meleeDamage = 40;
-            Attack();
-        }
-        if (Input.GetButtonDown("Fire3"))
-        {
-            meleeDamage = 60;
-            Attack();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                animator.Play("Attack#1_Animation");
+                meleeDamage = 20;
+                Attack();
+            }
+
+            if (Input.GetButtonDown("Fire2"))
+            {
+                animator.Play("Attack#2_Animation");
+                meleeDamage = 40;
+                Attack();
+                nextMeleeTime = Time.time + 5f / meleeRate;
+            }
+
+            if (Input.GetButtonDown("Fire3"))
+            {
+                animator.Play("Wolf_Dash");
+                meleeDamage = 60;
+                Attack();
+                nextMeleeTime = Time.time + 10f / meleeRate;
+            }
         }
     }
 
