@@ -1,40 +1,39 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyHitBox : MonoBehaviour
+namespace Script
 {
-    public Animator animator;
-    public int healthAmount = 200;
-    int currentHealth;
-    void Start()
+    public class EnemyHitBox : MonoBehaviour
     {
-        currentHealth = healthAmount;
-    }
-
-    public void GetsDamaged(int damage)
-    {
-        currentHealth -= damage;
-        
-        animator.SetTrigger("Hit");
-
-        if (currentHealth <= 0)
+        public Animator animator;
+        public int healthAmount = 200;
+        int currentHealth;
+        void Start()
         {
-            Death();
+            currentHealth = healthAmount;
         }
-    }
 
-    void Death()
-    {
-       Debug.Log("Enemy dead!"); 
-       animator.SetBool("Death", true);
+        public void GetsDamaged(int damage)
+        {
+            currentHealth -= damage;
+        
+            animator.SetTrigger("Hit");
 
-       GetComponent<Collider2D>().enabled = false;
-       GetComponent<Collider2D>().enabled = false;
-       this.enabled = false;
-    }
+            if (currentHealth <= 0)
+            {
+                Death();
+            }
+        }
+
+        void Death()
+        {
+            Debug.Log("Enemy dead!"); 
+            animator.SetBool("Death", true);
+
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+        }
 
    
+    }
 }

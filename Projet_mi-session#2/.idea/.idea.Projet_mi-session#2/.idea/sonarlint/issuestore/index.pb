@@ -11,3 +11,5 @@ M
 Assets/Script/PlayerAttack.cs,9\b\9bc0597f36de09de5481103ab00c92ec9d00ae89
 O
 Assets/Script/PlayerMovement.cs,d\2\d22aaaa89ae3f8f0d4ba903b6a0d8d8cefdaf19a
+M
+Assets/Script/enemyControl.cs,b\6\b65c6a1e97364003caff4776039b7b822da824e6
