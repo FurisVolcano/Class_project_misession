@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyHitBox : MonoBehaviour
 {
-    public int healthAmount = 100;
+  
+    public int healthAmount = 200;
     int currentHealth;
     void Start()
     {
@@ -13,7 +16,7 @@ public class EnemyHitBox : MonoBehaviour
 
     public void GetsDamaged(int damage)
     {
-        currentHealth -= healthAmount;
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {

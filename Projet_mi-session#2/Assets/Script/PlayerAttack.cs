@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Transform meleePoint;
-    public float meleeRange = 0.5f;
+    public Transform meleePoint; 
     public LayerMask enemyLayers;
-    public int meleeDamage;
+    
+    public float meleeRange = 0.5f;
+    private int meleeDamage = 20;
 
 
     // Update is called once per frame
@@ -16,38 +17,29 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            meleeDamage = 20;
             Attack();
         }
         if (Input.GetButtonDown("Fire2"))
         {
+            meleeDamage = 40;
             Attack();
         }
         if (Input.GetButtonDown("Fire3"))
         {
+            meleeDamage = 60;
             Attack();
         }
     }
 
     void Attack()
     {
+        
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(meleePoint.position, meleeRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-
             enemy.GetComponent<EnemyHitBox>().GetsDamaged(meleeDamage);
-            if (Input.GetButtonDown("Fire1"))
-            {
-                meleeDamage = 20;
-            }
-            if (Input.GetButtonDown("Fire2"))
-            {
-                meleeDamage = 40;
-            }
-            if (Input.GetButtonDown("Fire3"))
-            {
-                meleeDamage = 60;
-            }
         }
        
     }
