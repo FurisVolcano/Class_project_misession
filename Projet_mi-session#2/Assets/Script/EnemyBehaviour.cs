@@ -1,4 +1,6 @@
 using System;
+using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,7 +21,7 @@ namespace Script
 
         #region Private Variables
         private RaycastHit2D hit;
-        private GameObject target;
+        private Transform target;
         private Animator animator;
         private float distance;//store the distance between enemy and player
         private bool attackmode;
@@ -29,11 +31,14 @@ namespace Script
         private static readonly int SkeletonAttack = Animator.StringToHash("Skeleton_Attack");
         private static readonly int SkeletonWalk = Animator.StringToHash("Skeleton_Walk");
         private static readonly int Walk = Animator.StringToHash("SkeletonWalk");
+        public Transform leftLimit;
+        public Transform rightLimit;
 
         #endregion
 
         void Awake()
         {
+            SelectTarget();
             intTimer = timer;//store the initial value of timer
             animator = GetComponent<Animator>();
         }
@@ -41,9 +46,18 @@ namespace Script
         // Update is called once per frame
         void Update()
         {
+            if (!attackmode)
+            {
+                Move();
+            }
+
+            if (!InsideOfLimits() && !inRange && !animator.GetCurrentAnimatorStateInfo(0).IsName("Skeleton_Attack"))
+            {
+                SelectTarget();
+            }
             if (inRange)
             {
-                hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLenght, RayCastMask);
+                hit = Physics2D.Raycast(rayCast.position, transform.right, rayCastLenght, RayCastMask);
                 RayCastDebugger();
             }
 
@@ -58,14 +72,14 @@ namespace Script
 
             if (inRange == false)
             {
-                animator.SetBool(SkeletonWalk, false);
+            
                 StopAttack();
             }
         }
 
         void EnemyLogic()
         {
-            distance = Vector2.Distance(transform.position, target.transform.position);
+            distance = Vector2.Distance(transform.position, target.position);
 
             if (distance > attackDistance)
             {
@@ -80,39 +94,31 @@ namespace Script
             if (cooling)
             {
                 Cooldown();
-                animator.SetBool(SkeletonAttack, false);
+                animator.SetBool("Skeleton_Attack", false);
             }
         }
 
         void Move()
             {
-                animator.SetBool(SkeletonWalk, true);
+                animator.SetBool("Skeleton_Walk", true);
                 
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Skel_attack"))
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Skeleton_Attack"))
                 {
-                    Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
+                    Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
                     transform.position =
                         Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
                 }
             }
         
         
-        private void OnTriggerEnter2D(Collider2D trig)
-        {
-            if (trig.gameObject.CompareTag("Player"))
-            {
-                target = trig.gameObject;
-                inRange = true;
-            }
-        }
 
         void Attack()
         {
             timer = intTimer; //Reset Timer when player enter Attack Range
             attackmode = true;//check if enemy can still attack
             
-            animator.SetBool(SkeletonWalk, false);
-            animator.SetBool(SkeletonAttack, true);
+            animator.SetBool("Skeleton_Walk", false);
+            animator.SetBool("Skeleton_Attack", true);
         }
 
         private void Cooldown()
@@ -124,23 +130,32 @@ namespace Script
                 timer = intTimer;
             }
         }
+        private void OnTriggerEnter2D(Collider2D trig)
+        {
+            if (trig.gameObject.CompareTag("Player"))
+            {
+                target = trig.transform;
+                inRange = true;
+                Flip();
+            }
+        }
 
         void StopAttack()
         {
             cooling = false;
             attackmode = false;
-            animator.SetBool(SkeletonAttack, false);
+            animator.SetBool("Skeleton_Attack", false);
         }
 
         void RayCastDebugger()
             {
                 if (distance > attackDistance)
                 {
-                    Debug.DrawRay(rayCast.position, Vector2.left * rayCastLenght, Color.red);
+                    Debug.DrawRay(rayCast.position, transform.right * rayCastLenght, Color.red);
                 }
                 else if (attackDistance > distance)
                 {
-                    Debug.DrawRay(rayCast.position, Vector2.left * rayCastLenght);
+                    Debug.DrawRay(rayCast.position, transform.right * rayCastLenght);
                 }
             }
 
@@ -148,8 +163,46 @@ namespace Script
         {
             cooling = true;
         }
-        }
-    }
 
+        private bool InsideOfLimits()
+        {
+            return transform.position.x > leftLimit.position.x && transform.position.x < rightLimit.position.x;
+        }
+
+        private void SelectTarget()
+        {
+            float distanceToLeft = Vector2.Distance(transform.position, leftLimit.position);
+            float distanceToRight = Vector2.Distance(transform.position, rightLimit.position);
+
+            if (distanceToLeft > distanceToRight)
+            {
+                target = leftLimit;
+            }
+            else
+            {
+                target = rightLimit;
+            }
+
+            Flip();
+        }
+
+        private void Flip()
+        {
+            Vector3 rotation = transform.eulerAngles;
+            if (transform.position.x > target.position.x)
+            {
+                rotation.y = 180f;
+            }
+            else
+            {
+                rotation.y = 0f;
+            }
+
+            transform.eulerAngles = rotation;
+        }
+        
+    }
+    
+}
 
 
