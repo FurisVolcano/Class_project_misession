@@ -26,6 +26,10 @@ namespace Script
         private bool inRange;
         private bool cooling; //check if ennemy is cooling after attack;
         private float intTimer;
+        private static readonly int SkeletonAttack = Animator.StringToHash("Skeleton_Attack");
+        private static readonly int SkeletonWalk = Animator.StringToHash("Skeleton_Walk");
+        private static readonly int Walk = Animator.StringToHash("SkeletonWalk");
+
         #endregion
 
         void Awake()
@@ -54,7 +58,7 @@ namespace Script
 
             if (inRange == false)
             {
-                animator.SetBool("Skeleton_Walk", false);
+                animator.SetBool(SkeletonWalk, false);
                 StopAttack();
             }
         }
@@ -76,13 +80,13 @@ namespace Script
             if (cooling)
             {
                 Cooldown();
-                animator.SetBool("Skeleton_Attack", false);
+                animator.SetBool(SkeletonAttack, false);
             }
         }
 
         void Move()
             {
-                animator.SetBool("SkeletonWalk", true);
+                animator.SetBool(SkeletonWalk, true);
                 
                 if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Skel_attack"))
                 {
@@ -95,7 +99,7 @@ namespace Script
         
         private void OnTriggerEnter2D(Collider2D trig)
         {
-            if (trig.gameObject.tag == "Player")
+            if (trig.gameObject.CompareTag("Player"))
             {
                 target = trig.gameObject;
                 inRange = true;
@@ -107,8 +111,8 @@ namespace Script
             timer = intTimer; //Reset Timer when player enter Attack Range
             attackmode = true;//check if enemy can still attack
             
-            animator.SetBool("Skeleton_Walk", false);
-            animator.SetBool("Skeleton_Attack", true);
+            animator.SetBool(SkeletonWalk, false);
+            animator.SetBool(SkeletonAttack, true);
         }
 
         private void Cooldown()
@@ -125,7 +129,7 @@ namespace Script
         {
             cooling = false;
             attackmode = false;
-            animator.SetBool("Skeleton_Attack", false);
+            animator.SetBool(SkeletonAttack, false);
         }
 
         void RayCastDebugger()
