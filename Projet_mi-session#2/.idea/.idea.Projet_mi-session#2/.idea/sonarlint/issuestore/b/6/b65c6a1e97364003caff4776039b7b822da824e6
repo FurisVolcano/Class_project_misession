@@ -1,7 +1,6 @@
 
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ç›Âßøÿÿÿÿ8àºËÏ³1
-mcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(Ü‡ß‘ûÿÿÿÿ8àºËÏ³1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(þÜ’™8áºËÏ³1
-[csharpsquid:S2190"2Add a way to break out of this method's recursion.(øÉæµúÿÿÿÿ8¹´¦Ñ³1
-zcsharpsquid:S1450"WRemove the field 'animator' and declare it as a local variable in the relevant methods.(àƒä8áºËÏ³1
-Mcsharpsquid:S1481)")Remove the unused local variable 'point'.(ˆÐåŠ8Ÿ‹ÕÑ³1
+Scsharpsquid:S1125"*Remove the unnecessary Boolean literal(s).(‡´ÆÊùÿÿÿÿ8À²¾Õ³1
+Ncsharpsquid:S1125"*Remove the unnecessary Boolean literal(s).(³³ˆº8çàÁÕ³1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(þÜ’™8È˜šÕ³1
+mcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(Ñ¥ÊÅÿÿÿÿÿ8²¥»Õ³1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(²´­­8¿¨žÕ³1
