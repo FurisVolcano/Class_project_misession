@@ -816,7 +816,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -0.014303118, y: -0.0063319206}
+  m_Offset: {x: -0.014303118, y: 0.0021685213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -827,7 +827,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19109452, y: 0.38810098}
+  m_Size: {x: 0.19109452, y: 0.3711001}
   m_EdgeRadius: 0
 --- !u!50 &538631333
 Rigidbody2D:
@@ -960,13 +960,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 700
-  jumpForce: 500
+  jumpForce: 1500
   cellingCheck: {fileID: 120712959}
   groundCheck: {fileID: 1751553680}
   groundObjects:
     serializedVersion: 2
     m_Bits: 64
-  checkRadius: 100
+  checkRadius: 124.6
   maxJumpCount: 5
 --- !u!66 &538631339
 CompositeCollider2D:
@@ -1012,15 +1012,15 @@ CompositeCollider2D:
       - X: -6436711936
         Y: 11886267392
       - X: -6436711936
-        Y: -12688136192
+        Y: -11611646976
       - X: 4760521728
-        Y: -12688136192
+        Y: -11611646976
   m_CompositePaths:
     m_Paths:
-    - - {x: 476.05212, y: -1268.8136}
+    - - {x: 476.05212, y: -1161.1647}
       - {x: 476.05212, y: 1188.6267}
       - {x: -643.6712, y: 1188.6267}
-      - {x: -643.67114, y: -1268.8136}
+      - {x: -643.67114, y: -1161.1647}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1540,8 +1540,8 @@ Transform:
   m_GameObject: {fileID: 859050928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0}
-  m_LocalPosition: {x: 2.8693137, y: -0.21122685, z: 0.01921427}
-  m_LocalScale: {x: -0.00029339636, y: 0.0003321177, z: 0.120757975}
+  m_LocalPosition: {x: 0.71, y: -0.29, z: 0.01921427}
+  m_LocalScale: {x: -0.00005894273, y: 0.00006672177, z: 0.024260031}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1086350642}
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   RayCastMask:
     serializedVersion: 2
     m_Bits: 512
-  rayCastLenght: 6
+  rayCastLenght: 1.32
   attackDistance: 2
   moveSpeed: 2000
   timer: 1
@@ -2166,8 +2166,8 @@ Transform:
   m_GameObject: {fileID: 1613539650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0}
-  m_LocalPosition: {x: -0.887378, y: -0.24277803, z: 0.01921427}
-  m_LocalScale: {x: 0.0003338557, y: -0.0008498228, z: 0.120757975}
+  m_LocalPosition: {x: -0.66, y: -0.29, z: 0.01921427}
+  m_LocalScale: {x: -0.0008096001, y: -0.0008498228, z: 0.120757975}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1086350642}
