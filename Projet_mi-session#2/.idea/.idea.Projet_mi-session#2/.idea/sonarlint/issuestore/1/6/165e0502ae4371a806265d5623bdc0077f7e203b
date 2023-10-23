@@ -1,0 +1,5 @@
+
+csharpsquid:S101"dRename class 'RedBarrel_Script' to match pascal case naming rules, consider using 'RedBarrelScript'.(ùäE
+Kcsharpsquid:S3903"/Move 'RedBarrel_Script' into a named namespace.(ùäE
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿ
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿ
