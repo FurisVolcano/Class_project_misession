@@ -1,5 +1,0 @@
-
-ƒcsharpsquid:S101"bRename class 'Camera_movement' to match pascal case naming rules, consider using 'Cameramovement'.(½éø„ûÿÿÿÿ
-Pcsharpsquid:S3903".Move 'Camera_movement' into a named namespace.(½éø„ûÿÿÿÿ
-›csharpsquid:S1186	"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿ
-¢csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²þÿÿÿÿ8ÙŽ™²±1
